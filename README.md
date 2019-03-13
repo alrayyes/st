@@ -7,6 +7,8 @@
 + [solarized](https://st.suckless.org/patches/solarized/)
 + [vertcenter](https://st.suckless.org/patches/vertcenter/)
 + [scrollback](https://st.suckless.org/patches/scrollback/)
++ [scrollback-mouse](https://st.suckless.org/patches/scrollback/)
++ [disable_bold_italic_fonts](https://st.suckless.org/patches/disable_bold_italic_fonts/)
 
 ## Terminal-specific mappings
 
