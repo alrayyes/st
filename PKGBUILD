@@ -10,10 +10,10 @@ depends=('libxft' 'libxext' 'nerd-fonts-source-code-pro')
 makedepends=('ncurses')
 url="http://st.suckless.org"
 
-_patches=("https://st.suckless.org/patches/clipboard/st-clipboard-0.8.2.diff"
-          "https://st.suckless.org/patches/scrollback/st-scrollback-20190122-3be4cf1.diff"
-          "https://st.suckless.org/patches/scrollback/st-scrollback-mouse-0.8.diff"
-          "https://st.suckless.org/patches/vertcenter/st-vertcenter-20180320-6ac8c8a.diff"
+_patches=("st-clipboard-0.8.2.diff"
+          "st-scrollback-20190122-3be4cf1.diff"
+          "st-scrollback-mouse-0.8.diff"
+          "st-vertcenter-20180320-6ac8c8a.diff"
           "local-st-alpha-0.8.2.diff"
           "local-disable-bold-italic-fonts.diff")
 
