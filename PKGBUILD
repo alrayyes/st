@@ -6,8 +6,9 @@ pkgrel=1
 pkgdesc='A simple virtual terminal emulator for X.'
 arch=('i686' 'x86_64')
 license=('MIT')
-depends=('libxft' 'libxext' 'nerd-fonts-source-code-pro')
+depends=('libxft' 'libxext')
 makedepends=('ncurses')
+optdepends=('nerd-fonts-source-code-pro')
 url="http://st.suckless.org"
 
 _patches=("st-clipboard-0.8.2.diff"
