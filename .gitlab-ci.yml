@@ -8,4 +8,8 @@ build:package:
     stage: compile
     image: archlinux/base
     script:
-        - makepkg -si
+        - pacman -S --needed --noconfirm sudo # Install sudo
+        - useradd builduser -m # Create the builduser
+        - passwd -d builduser # Delete the buildusers password
+        - printf 'builduser ALL=(ALL) ALL\n' | tee -a /etc/sudoers # Allow the builduser passwordless sudo
+        - sudo -u builduser 'bash -c makepkg -s'
