@@ -8,4 +8,5 @@ build:package:
     stage: compile
     image: registry.higherlearning.eu/personal/homelab/docker/arch-pkg-build
     script:
+        - pacman -Sy
         - sudo -u builduser bash -c 'makepkg -s'
