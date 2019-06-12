@@ -1,5 +1,7 @@
 # My Suckless Terminal Build
 
+[![pipeline status](https://gitlab.higherlearning.eu/personal/github/st/badges/master/pipeline.svg)](https://gitlab.higherlearning.eu/personal/github/st/commits/master)
+
 [Suckless Terminal](https://st.suckless.org) [Arch](https://www.archlinux.org/) package with a few patches installed to keep things nice:
 
 + [alpha](https://st.suckless.org/patches/alpha/)
