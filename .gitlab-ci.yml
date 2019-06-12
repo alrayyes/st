@@ -1,0 +1,11 @@
+stages:
+    - compile
+
+services:
+    - docker:dind
+
+build:package:
+    stage: compile
+    image: archlinux/base
+    script:
+        - makepkg -si
