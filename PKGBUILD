@@ -7,6 +7,7 @@ pkgdesc='A simple virtual terminal emulator for X.'
 arch=('i686' 'x86_64')
 license=('MIT')
 depends=('libxft' 'libxext')
+optdepends=('nerd-fonts-source-code-pro')
 makedepends=('ncurses')
 url="http://st.suckless.org"
 
