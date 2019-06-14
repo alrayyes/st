@@ -1,6 +1,6 @@
 # Maintainer: Ryan Kes <alrayyes gmail com>
 
-pkgname=st
+pkgname=higherlearning-st
 pkgver=0.8.2
 pkgrel=1
 pkgdesc='A simple virtual terminal emulator for X.'
