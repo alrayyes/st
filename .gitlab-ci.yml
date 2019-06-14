@@ -3,6 +3,7 @@ stages:
   - build_package
   - install_package
   - check_package
+  - deploy_package
 
 check_pkgbuild:
   image: ${CI_REGISTRY}/personal/homelab/docker/arch-pkg-build:latest
@@ -31,3 +32,14 @@ check_package:
   artifacts:
     paths:
       - PKG.namcap.out
+      
+deploy_package:
+  stage: deploy_package
+  tags:
+    - python
+  script:
+    - mkdir ~/.aws/
+    - touch ~/.aws/credentials
+    - pip install awscli
+    - printf "[eb-cli]\naws_access_key_id = %s\naws_secret_access_key = %s\n" "$AWS_ACCESS_KEY_ID" "$AWS_SECRET_ACCESS_KEY" >> ~/.aws/credentials
+    - aws s3 sync *.pkg.tar.xz s3://s3.eu-central-1.wasabisys.com/my-arch-repo/ --acl public-read
