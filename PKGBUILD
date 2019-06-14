@@ -32,7 +32,7 @@ sha256sums=('aeb74e10aa11ed364e1bcc635a81a523119093e63befd2f231f8b0705b15bf35'
             '59d5719a68e2f0e25c44b6ad9fab0d62ee8a6c5bcbcffb38176e9950cda16b15')
 
 prepare() {
-  cd $srcdir/$pkgname-$pkgver
+  cd $srcdir/st-$pkgver
   # skip terminfo which conflicts with nsurses
   sed -i '/\ttic -sx st.info/d' Makefile
 
@@ -45,12 +45,12 @@ prepare() {
 }
 
 build() {
-  cd $srcdir/$pkgname-$pkgver
+  cd $srcdir/st-$pkgver
   make X11INC=/usr/include/X11 X11LIB=/usr/lib/X11
 }
 
 package() {
-  cd $srcdir/$pkgname-$pkgver
+  cd $srcdir/st-$pkgver
   make PREFIX=/usr DESTDIR="$pkgdir" TERMINFO="$pkgdir/usr/share/terminfo" install
   install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
   install -Dm644 README "$pkgdir/usr/share/doc/$pkgname/README"
