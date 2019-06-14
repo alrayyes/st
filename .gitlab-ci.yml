@@ -1,12 +1,37 @@
+image: ${CI_REGISTRY}/personal/homelab/docker/arch-pkg-build:latest
+
 stages:
-    - compile
+  - check_pkgbuild
+  - build_package
+  - install_package
+  - check_package
 
-services:
-    - docker:dind
+check_pkgbuild:
+  stage: check_pkgbuild
+  script:
+    - namcap PKGBUILD > PKGBUILD.namcap.out
+  artifacts:
+    paths:
+      - PKGBUILD.namcap.out
 
-build:package:
-    stage: compile
-    image: registry.higherlearning.eu/personal/homelab/docker/arch-pkg-build
-    script:
-        - pacman -Sy
-        - sudo -u builduser bash -c 'makepkg -s'
+build_package:
+  stage: build_package
+  script:
+    - makepkg --syncdeps --noconfirm --log --check
+  artifacts:
+    paths:
+      - "*.log"
+      - "*.pkg.tar.xz"
+
+install_package:
+  stage: install_package
+  script:
+    - sudo pacman -U *.pkg.tar.xz
+
+check_package:
+  stage: check_package
+  script:
+    - namcap *.pkg.tar.xz > PKG.namcap.out
+  artifacts:
+    paths:
+      - PKG.namcap.out
