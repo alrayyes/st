@@ -38,3 +38,6 @@ trigger:my-arch-repo:
   stage: trigger     
   script:         
     - curl -X POST -F token=$ARCH_TOKEN -F ref=master -F "variables[TRIGGERER_PIPELINE_ID]=${CI_PIPELINE_ID}" http://gitlab/api/v4/projects/342/trigger/pipeline
+  artifacts:
+    paths:
+      - "*.pkg.tar.xz"
