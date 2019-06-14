@@ -37,8 +37,5 @@ deploy_package:
   image: python:alpine
   stage: deploy_package
   script:
-    - mkdir ~/.aws/
-    - touch ~/.aws/credentials
     - pip install awscli
-    - printf "[eb-cli]\naws_access_key_id = %s\naws_secret_access_key = %s\n" "$AWS_ACCESS_KEY_ID" "$AWS_SECRET_ACCESS_KEY" >> ~/.aws/credentials
     - aws s3 sync *.pkg.tar.xz s3://s3.eu-central-1.wasabisys.com/my-arch-repo/ --acl public-read
