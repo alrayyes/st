@@ -34,7 +34,7 @@ check_package:
       - PKG.namcap.out
       
 trigger:my-arch-repo:
-  image: registry.higherlearning.eu/personal/homelab/docker/my-arch-repo:latest
+  image: andthensome/curl
   stage: trigger     
   script:         
     - curl -X POST -F token=$ARCH_TOKEN -F ref=master http://gitlab/api/v4/projects/342/trigger/pipeline
