@@ -18,7 +18,7 @@ _patches=("st-clipboard-0.8.2.diff"
           "local-st-alpha-0.8.2.diff"
           "local-disable-bold-italic-fonts.diff")
 
-source=("http://dl.suckless.org/st/$pkgname-$pkgver.tar.gz"
+source=("http://dl.suckless.org/st/st-$pkgver.tar.gz"
         "config.h"
         "${_patches[@]}")
 
