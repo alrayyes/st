@@ -1,12 +1,12 @@
-image: ${CI_REGISTRY}/personal/homelab/docker/arch-pkg-build:latest
-
 stages:
   - check_pkgbuild
   - build_package
   - install_package
   - check_package
+  - trigger
 
 check_pkgbuild:
+  image: ${CI_REGISTRY}/personal/homelab/docker/arch-pkg-build:latest
   stage: check_pkgbuild
   script:
     - namcap PKGBUILD > PKGBUILD.namcap.out
@@ -15,6 +15,7 @@ check_pkgbuild:
       - PKGBUILD.namcap.out
 
 build_package:
+  image: ${CI_REGISTRY}/personal/homelab/docker/arch-pkg-build:latest
   stage: build_package
   script:
     - makepkg --syncdeps --noconfirm --log --check
@@ -24,9 +25,16 @@ build_package:
       - "*.pkg.tar.xz"
 
 check_package:
+  image: ${CI_REGISTRY}/personal/homelab/docker/arch-pkg-build:latest
   stage: check_package
   script:
     - namcap *.pkg.tar.xz > PKG.namcap.out
   artifacts:
     paths:
       - PKG.namcap.out
+      
+trigger:my-arch-repo:
+  image: registry.higherlearning.eu/personal/homelab/docker/my-arch-repo:latest
+  stage: trigger     
+  script:         
+    - curl -X POST -F token=$ARCH_TOKEN -F ref=master http://gitlab/api/v4/projects/342/trigger/pipeline
