@@ -3,7 +3,6 @@ stages:
   - build_package
   - install_package
   - check_package
-  - trigger
 
 check_pkgbuild:
   image: ${CI_REGISTRY}/personal/homelab/docker/arch-pkg-build:latest
@@ -32,12 +31,3 @@ check_package:
   artifacts:
     paths:
       - PKG.namcap.out
-      
-trigger:my-arch-repo:
-  image: andthensome/curl
-  stage: trigger     
-  script:         
-    - curl -X POST -F token=$ARCH_TOKEN -F ref=master -F "variables[TRIGGERER_PIPELINE_ID]=${CI_PIPELINE_ID}" http://gitlab/api/v4/projects/342/trigger/pipeline
-  artifacts:
-    paths:
-      - "*.pkg.tar.xz"
