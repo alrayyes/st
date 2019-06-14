@@ -34,9 +34,8 @@ check_package:
       - PKG.namcap.out
       
 deploy_package:
+  image: python
   stage: deploy_package
-  tags:
-    - python
   script:
     - mkdir ~/.aws/
     - touch ~/.aws/credentials
