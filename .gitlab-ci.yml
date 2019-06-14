@@ -34,8 +34,7 @@ check_package:
       - PKG.namcap.out
       
 deploy_package:
-  image: python:alpine
+  image: andthensome/awscli
   stage: deploy_package
   script:
-    - pip install awscli
     - aws s3 sync *.pkg.tar.xz s3://s3.eu-central-1.wasabisys.com/my-arch-repo/ --acl public-read
