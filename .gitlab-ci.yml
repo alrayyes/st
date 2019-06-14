@@ -23,11 +23,6 @@ build_package:
       - "*.log"
       - "*.pkg.tar.xz"
 
-install_package:
-  stage: install_package
-  script:
-    - sudo pacman -U *.pkg.tar.xz
-
 check_package:
   stage: check_package
   script:
