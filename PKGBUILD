@@ -9,6 +9,7 @@ license=('MIT')
 depends=('libxft' 'libxext')
 optdepends=('nerd-fonts-source-code-pro')
 makedepends=('ncurses')
+conflicts=('st')
 url="http://st.suckless.org"
 
 _patches=("st-clipboard-0.8.2.diff"
