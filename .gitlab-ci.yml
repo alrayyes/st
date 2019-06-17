@@ -27,7 +27,7 @@ build_package:
 
 build_repo:
   image: ${CI_REGISTRY}/personal/homelab/docker/arch-pkg-build:latest
-  state: build_repo
+  stage: build_repo
   script:
     - mkdir -p local-repo
     - repo-add local-repo/higherlearning.db.tar.xz
