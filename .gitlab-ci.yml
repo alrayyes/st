@@ -3,6 +3,7 @@ stages:
   - build_package
   - install_package
   - check_package
+  - build_repo
   - deploy_package
 
 check_pkgbuild:
@@ -23,6 +24,15 @@ build_package:
     paths:
       - "*.log"
       - "*.pkg.tar.xz"
+
+build_repo:
+  state: build_repo
+  script:
+    - mkdir -p local-repo
+    - repo-add local-repo/higherlearning.db.tar.xz
+  cache:
+    paths:
+      - local-repo/
 
 check_package:
   image: ${CI_REGISTRY}/personal/homelab/docker/arch-pkg-build:latest
