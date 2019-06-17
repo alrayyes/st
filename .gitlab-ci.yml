@@ -37,4 +37,4 @@ deploy_package:
   image: andthensome/awscli
   stage: deploy_package
   script:
-    - aws s3 sync *.pkg.tar.xz s3://s3.eu-central-1.wasabisys.com/my-arch-repo/ --acl public-read
+    - aws s3 sync . --endpoint-url=https://s3.eu-central-1.wasabisys.com s3://my-arch-repo/ --acl public-read --exclude "*" --include "*.pkg.tar.xz"
