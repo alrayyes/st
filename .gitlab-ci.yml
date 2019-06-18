@@ -3,6 +3,8 @@ stages:
   - build_package
   - install_package
   - check_package
+  - build_repo
+  - deploy_package
 
 check_pkgbuild:
   image: ${CI_REGISTRY}/personal/homelab/docker/arch-pkg-build:latest
@@ -23,6 +25,16 @@ build_package:
       - "*.log"
       - "*.pkg.tar.xz"
 
+build_repo:
+  image: ${CI_REGISTRY}/personal/homelab/docker/arch-pkg-build:latest
+  stage: build_repo
+  script:
+    - mkdir -p local-repo
+    - repo-add local-repo/higherlearning.db.tar.xz
+  cache:
+    paths:
+      - local-repo/
+
 check_package:
   image: ${CI_REGISTRY}/personal/homelab/docker/arch-pkg-build:latest
   stage: check_package
@@ -31,3 +43,9 @@ check_package:
   artifacts:
     paths:
       - PKG.namcap.out
+      
+deploy_package:
+  image: andthensome/awscli
+  stage: deploy_package
+  script:
+    - aws s3 sync . --endpoint-url=https://s3.eu-central-1.wasabisys.com s3://my-arch-repo/ --acl public-read --exclude "*" --include "*.pkg.tar.xz"
