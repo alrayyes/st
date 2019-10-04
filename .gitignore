@@ -2,4 +2,5 @@ pkg/
 src/
 higherlearning-st*.xz
 st*.gz
+st*.xz
 higherlearning-st*.gz
