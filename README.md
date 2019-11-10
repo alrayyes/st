@@ -30,7 +30,7 @@ makepkg -si
 ## Further Notes
 
 + Change the transparency value by modifying the `alpha` variable in [config.h](https://github.com/alrayyes/st/blob/master/config.h).
-+ Default font is [Sauce Code Pro Nerd Font Mono](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/SourceCodePro) at 20pt
++ Default font is [Fira Code Nerd Font Mono](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/FiraCode)
 * When modifying [config.h](https://github.com/alrayyes/st/blob/master/config.h) be sure to run ```updpkgsums``` to update checksums before running ```makepkg -si```
 
 ## License
