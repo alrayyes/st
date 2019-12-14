@@ -1,55 +1,9 @@
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-      
-      
-
-      * The MIT License (MIT)
-  :PROPERTIES:
+* The MIT License (MIT)
+:PROPERTIES:
   :CUSTOM_ID: the-mit-license-mit
   :END:
 
-Copyright © =2019= =Ryan Kes <alrayyes at gmail dot com>=
+Copyright © =2019= =Ryan Kes <alias-st at ryankes dot eu>=
 
 Permission is hereby granted, free of charge, to any person obtaining a
 copy of this software and associated documentation files (the
@@ -69,5 +23,3 @@ IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
 CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-

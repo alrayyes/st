@@ -1,7 +1,7 @@
 * My Suckless Terminal Build
-  :PROPERTIES:
-  :CUSTOM_ID: my-suckless-terminal-build
-  :END:
+:PROPERTIES:
+:CUSTOM_ID: my-suckless-terminal-build
+:END:
 
 [[https://st.suckless.org][Suckless Terminal]]
 [[https://www.archlinux.org/][Arch]] package with a few patches
@@ -16,9 +16,9 @@ installed to keep things nice:
 - [[https://st.suckless.org/patches/disable_bold_italic_fonts/][disable_bold_italic_fonts]]
 
 ** Terminal-specific mappings
-   :PROPERTIES:
-   :CUSTOM_ID: terminal-specific-mappings
-   :END:
+:PROPERTIES:
+:CUSTOM_ID: terminal-specific-mappings
+:END:
 
 - Scroll through history -- Shift+PageUp/PageDown or Shift+Mouse wheel
 - Alt-k and Alt-j scroll back/foward in history one line at a time
@@ -28,34 +28,28 @@ installed to keep things nice:
 - Paste -- Shift+Insert
 
 ** Installation
-   :PROPERTIES:
-   :CUSTOM_ID: installation
-   :END:
+:PROPERTIES:
+:CUSTOM_ID: installation
+:END:
 
-#+BEGIN_EXAMPLE
-  makepkg -si
-#+END_EXAMPLE
+#+BEGIN_SRC shell
+makepkg -si
+#+END_SRC
 
 ** Further Notes
-   :PROPERTIES:
-   :CUSTOM_ID: further-notes
-   :END:
+:PROPERTIES:
+:CUSTOM_ID: further-notes
+:END:
 
-- Change the transparency value by modifying the =alpha= variable in
-  [[https://github.com/alrayyes/st/blob/master/config.h][config.h]].
-- Default font is
-  [[https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/FiraCode][Fira
-  Code Nerd Font Mono]]
-- When modifying
-  [[https://github.com/alrayyes/st/blob/master/config.h][config.h]] be
-  sure to run =updpkgsums= to update checksums before running
-  =makepkg -si=
+- Change the transparency value by modifying the =alpha= variable in [[https://github.com/alrayyes/st/blob/master/config.h][config.h]].
+- Default font is [[https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/FiraCode][Fira Code Nerd Font Mono]]
+- When modifying [[https://github.com/alrayyes/st/blob/master/config.h][config.h]] be sure to run =updpkgsums= to update checksums before
+  running =makepkg -si=
 
 ** License
-   :PROPERTIES:
-   :CUSTOM_ID: license
-   :END:
+:PROPERTIES:
+:CUSTOM_ID: license
+:END:
 
 This theme is released under the MIT License. For more information read
 the [[file:LICENSE.org][license]].
-
