@@ -3,7 +3,7 @@
   :CUSTOM_ID: the-mit-license-mit
   :END:
 
-Copyright © =2019= =Ryan Kes <alias-st at ryankes dot eu>=
+Copyright © =2019= =Ryan Kes=
 
 Permission is hereby granted, free of charge, to any person obtaining a
 copy of this software and associated documentation files (the
