@@ -57,5 +57,5 @@ installed to keep things nice:
    :END:
 
 This theme is released under the MIT License. For more information read
-the [[file:LICENSE][license]].
+the [[file:LICENSE.org][license]].
 
