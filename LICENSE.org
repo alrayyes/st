@@ -1,7 +1,7 @@
 * The MIT License (MIT)
 :PROPERTIES:
-  :CUSTOM_ID: the-mit-license-mit
-  :END:
+:CUSTOM_ID: the-mit-license-mit
+:END:
 
 Copyright © =2019= =Ryan Kes=
 
