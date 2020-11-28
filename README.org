@@ -5,6 +5,7 @@
 
 - [[https://st.suckless.org/patches/alpha/][alpha]]
 - [[https://st.suckless.org/patches/clipboard/][clipboard]]
+- [[https://st.suckless.org/patches/font2/][font2]]
 - [[https://st.suckless.org/patches/ligatures/][ligatures]]
 - [[https://st.suckless.org/patches/scrollback/][scrollback]]
 - [[https://st.suckless.org/patches/scrollback/][scrollback-mouse]]
