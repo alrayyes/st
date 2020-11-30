@@ -6,7 +6,7 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 static char *font =
-    "Hack Nerd Font Mono:pixelsize=14:antialias=true:autohint=true";
+    "JetBrains Mono:pixelsize=14:antialias=true:autohint=true";
 
 static char *font2[] = {
     "JoyPixels:pixelsize=14:antialias=true:autohint=true",
