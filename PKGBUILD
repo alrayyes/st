@@ -6,7 +6,7 @@ pkgrel=1
 pkgdesc='A simple virtual terminal emulator for X.'
 arch=('i686' 'x86_64')
 license=('MIT')
-depends=('libxft' 'nerd-fonts-hack')
+depends=('libxft' 'ttf-jetbrains-mono')
 makedepends=('ncurses')
 conflicts=('st')
 url="http://st.suckless.org"
@@ -26,7 +26,7 @@ source=("http://dl.suckless.org/st/st-$pkgver.tar.gz"
         "${_patches[@]}")
 
 sha256sums=('d42d3ceceb4d6a65e32e90a5336e3d446db612c3fbd9ebc1780bc6c9a03346a6'
-            '0bd28ddbfe0a036fc1b4736ad4ba1435d98b14a8cda2f3558175a9aee48ccf14'
+            'fc89e358946dd837b1c4edafdb1887d51b99c81ca3eb66e7432985f2defab174'
             '0f5ce33953abce74a9da3088ea35bf067a9a4cfeb9fe6ea9800268ce69e436c0'
             '1e41fe17a5ef5a8194eea07422b49d815e2c2bb4d58d84771f793be423005310'
             '319458d980195d18fa0f81a6898d58f8d046c5ff982ab872d741f54bb60e267d'
