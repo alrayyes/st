@@ -19,6 +19,7 @@ _patches=("st-clipboard-0.8.3.diff"
           "st-alpha-0.8.2.diff"
           "st-ligatures-alpha-scrollback-20200430-0.8.3.diff"
           "st-font2-20190416-ba72400.diff"
+          "st-xresources-20200604-9ba7ecf.diff"
           )
 
 source=("http://dl.suckless.org/st/st-$pkgver.tar.gz"
@@ -34,7 +35,8 @@ sha256sums=('d42d3ceceb4d6a65e32e90a5336e3d446db612c3fbd9ebc1780bc6c9a03346a6'
             '04e6a4696293f668260b2f54a7240e379dbfabbc209de07bd5d4d57e9f513360'
             '9c5b4b4f23de80de78ca5ec3739dc6ce5e7f72666186cf4a9c6b614ac90fb285'
             'a7b3681d849fd8cca75cd38022a14fef2e26dc085bed1ebd8dcf0a65baa14898'
-            '7279c787dba23d72a8a0a4613c0917e03d0087f0254f56a530cd9c521857d20b')
+            '7279c787dba23d72a8a0a4613c0917e03d0087f0254f56a530cd9c521857d20b'
+            '5be9b40d2b51761685f6503e92028a7858cc6571a8867b88612fce8a70514d5b')
 
 prepare() {
   cd $srcdir/st-$pkgver

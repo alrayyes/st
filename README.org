@@ -11,6 +11,7 @@
 - [[https://st.suckless.org/patches/scrollback/][scrollback-mouse]]
 - [[https://st.suckless.org/patches/scrollback/][scrollback-mouse-altscreen]]
 - [[https://st.suckless.org/patches/vertcenter/][vertcenter]]
+- [[https://st.suckless.org/patches/xresources/][xresources]]
 
 ** Terminal-specific mappings
 - Scroll through history -- Shift+PageUp/PageDown or Shift+Mouse wheel
